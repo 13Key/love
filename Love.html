@@ -1,0 +1,82 @@
+<head>
+  <style>
+  div.big {
+    font-size: 80px;
+    text-align: center;
+    border: green 5px solid;
+    background-color: lightgreen;
+}
+    img {
+    border: green 5px solid;
+    padding: 4px;
+}
+  </style>
+<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.0/dist/hanzi-writer.min.js"></script>
+
+</head>
+<h1 style="text-align: center;">How to Write Love in Chinese</h1>
+<h3 style="text-align: center;">With the help of HTML, CSS, and JavaScript</h3>
+<h4>Introduction</h4>
+<p>Chinese characters can seem like gibberish to those unfamiliar with the language. Even a single word can seem like a mish-mash of random shapes and lines. However, with a little bit of assistance, it can be quite simple to break down a character line-by-line and make memorization a breeze. Take a look below to see how HTML, CSS, and Javascript can help us break down the Chinese word for love: 爱 (pronounced <em>&agrave;i</em>, like 'aye').</p>
+<h4>HTML</h4>
+<p>With just HTML, we cannot do much to help a reader new to Chinese learn how to write a character. The best we can do is simply display the character itself on the webpage.</p>
+<p>Here it is in paragraph (&lt;p&gt;) form:</p>
+<p>爱</p>
+<p>Making it a header (&lt;h1&gt;) makes it a bit easier to see:</p>
+<h1>爱</h1>
+<p>This isn't very helpful. Although you could sit down and draw what you see over and over again, Chinese actually has a specific <strong>stroke order&nbsp;</strong>for each of its tens of thousands of characters. Just displaying the character doesn't show you the correct way it is written. We clearly need a bit of help.</p>
+<h4>CSS</h4>
+<p>Adding CSS allows us to play around with how our HTML text is styled. For instance, we can make the character much larger with help from the CSS font-size property. We can also make it a bit easier to see using the HTML &lt;div&gt; element as well as adding a border and background color via CSS:</p>
+<div class="big">爱</div>
+<p>
+  This is better, but we are still left with the same problem as before: stroke order. An image can help us begin to chip away at this issue. Here, we display the image using HTML and use CSS to add a border around it and some padding to make it stand out.
+</p>
+<img src="https://www.onetoonechinese.com/wp-content/uploads/2020/03/ai-stroke.png" width=100% alt= "爱 stroke order">
+<p>
+  Success! Our stroke order problem has been dealt with. You can now follow the image to draw the character in the correct sequence. But wait, we still haven't addressed another quirk of Chinese characters. Not only does each character have a proper stroke order, but each stroke also must be written in a specific <strong>direction</strong>.
+</p>
+<p>
+While we could add some arrows to the image above displaying the correct direction, there is a different method that will be far more useful to you. Let's break out a bit of JavaScript to make an animation.
+</p>
+<h4>
+  JavaScript
+</h4>
+<p>With the help of an external JavaScript file that displays Chinese characters, we can show both stroke order and direction in a single animation:</p>
+<div id="character-target-div" style=border:"green 5px solid"></div>
+<script> var writer = HanziWriter.create('character-target-div', '爱', {
+  width: 150,
+  height: 150,
+  padding: 5,
+  delayBetweenLoops: 3000
+});
+
+writer.loopCharacterAnimation(); </script>
+<p>In addition, we can even create a space for you to practice writing on your own! Click and drag in the space below to draw the character 爱 three times. Remember to follow the correct stroke order and direction!</p>
+<div id="character-quiz-div"></div>
+<div id="character-quiz-div"></div>
+<div id="character-quiz-div"></div>
+<script>var writer = HanziWriter.create('character-quiz-div', '爱', {
+  width: 150,
+  height: 150,
+  showCharacter: false,
+  padding: 5
+});
+writer.quiz();
+</script>
+<script>var writer = HanziWriter.create('character-quiz-div', '爱', {
+  width: 150,
+  height: 150,
+  showCharacter: false,
+  padding: 5
+});
+writer.quiz();
+</script>
+<script>var writer = HanziWriter.create('character-quiz-div', '爱', {
+  width: 150,
+  height: 150,
+  showCharacter: false,
+  padding: 5
+});
+writer.quiz();
+</script>
+<p> Congratulations! With the help of HTML, CSS, and JavaScript, you can now write love in Chinese with the correct stroke order and direction!  </p>
